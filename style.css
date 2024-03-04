@@ -45,15 +45,13 @@ h1 + p {
 a {
     text-decoration: none;
     color: #7158EF;
-    margin-bottom: 7.2rem;
 }
 
 a:hover {
-    color: #170e4b;
+    font-weight: bold;
 }
 
 ul {
-    list-style: none;
     margin-top: 7.2rem;
 }
 
@@ -61,9 +59,14 @@ ul li {
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.2rem;
-    width: 25.7rem;
+    min-width: 25.7rem;
     display: flex;
     align-items: center;
+    gap: 3.8rem;
+}
+
+ul li + li {
+    margin-top: 3.2rem;
 }
 
 ul li span {
@@ -72,4 +75,30 @@ ul li span {
     line-height: 8.0rem;
     letter-spacing: -2px;
     color: #090039;
+}
+
+
+/*media queries */
+
+@media(min-width: 700px) {
+    body {
+        padding: 8rem;
+    }
+    main {
+        display: flex;
+        gap: 10rem;
+        max-width: 1020px;
+    }
+
+    main > div {
+        max-width: 484px;
+    }
+
+    ul li {
+        gap: 5.3rem;
+        max-width: 450px;
+        align-items: center;
+    }
+
+
 }
